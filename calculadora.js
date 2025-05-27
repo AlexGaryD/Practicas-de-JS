@@ -33,3 +33,4 @@ if (isNaN(num1) || isNaN(num2)) {
 } else {
   calculadora(num1, operador, num2);
 }
+sdadasfsdfsf
