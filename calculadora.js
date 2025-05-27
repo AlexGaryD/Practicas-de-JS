@@ -1,36 +1,27 @@
-function calculadora(num1, operador, num2) {
-  let resultado;
-  switch (operador) {
-    case "+":
-      resultado = num1 + num2;
-      break;
-    case "-":
-      resultado = num1 - num2;
-      break;
-    case "*":
-      resultado = num1 * num2;
-      break;
-    case "/":
-      if (num2 === 0) {
-        resultado = "Error: No se puede dividir por cero";
-      } else {
-        resultado = num1 / num2;
-      }
-      break;
-    default:
-      resultado = "Operador inexistente";
-      break;
+function suma(a, b) {
+  return a + b;
+}
+
+function resta(a, b) {
+  return a - b;
+}
+
+function multiplicacion(a, b) {
+  return a * b;
+}
+
+function division(a, b) {
+  if (b === 0) {
+    return "Error: No se puede dividir por cero";
   }
-  console.log(resultado);
+  return a / b;
 }
 
-const num1 = parseInt(prompt("Ingrese un número:"));
-const operador = prompt("Elija operador: +, -, *, / ");
-const num2 = parseInt(prompt("Ingrese otro número:"));
+// Ejemplo de uso:
+const num1 = 18;
+const num2 = 26;
 
-if (isNaN(num1) || isNaN(num2)) {
-  console.log("Error: Debe ingresar números válidos.");
-} else {
-  calculadora(num1, operador, num2);
-}
-sdadasfsdfsf
+console.log("Suma:", suma(num1, num2));
+console.log("Resta:", resta(num1, num2));
+console.log("Multiplicación:", multiplicacion(num1, num2));
+console.log("División:", division(num1, num2));
